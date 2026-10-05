@@ -1,0 +1,23 @@
+CallLane driver
+===============
+
+This repository is a derivative of BlackHole by Existential Audio Inc.
+https://github.com/ExistentialAudio/BlackHole, version 0.7.1, commit ffcb744.
+BlackHole is (c) 2019-2026 Existential Audio Inc. and is licensed under the
+GNU General Public License v3.0. The full licence text is in LICENSE. This
+driver is distributed under the same licence. Its complete source, including
+the build script (Makefile) and installer scripts (pkg/), is at
+https://github.com/rav4nn/calllane-driver.
+
+Changes to BlackHole/BlackHole.c:
+
+1. The box and the device report transport type USB instead of Virtual, so
+   call apps that list only physical devices (WhatsApp for Mac) show the device.
+2. The output stream reports terminal type Headphones instead of Speaker.
+
+Everything else is set through BlackHole's compile-time defines; see the
+`driver` target in the Makefile.
+
+The CallLane app, which uses this driver as a separate program through
+Core Audio, is (c) 2026 Hardeep Singh, all rights reserved, and is not
+covered by this licence.
